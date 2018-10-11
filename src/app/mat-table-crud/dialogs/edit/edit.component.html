@@ -1,0 +1,60 @@
+<div class="container">
+  <h3 mat-dialog-title>Issue id: {{data.id}}</h3>
+
+  <!-- <form class="mat-dialog-content" (ngSubmit)="submit" #formControl="ngForm"> -->
+
+    <!-- <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #input class="form-control" placeholder="Id" [(ngModel)]="data.id" name="id" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div> -->
+
+    <b>Id*:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.id"  ></mat-slider></b><!--<input   name="id"  >  -->
+
+
+    <!--Textarea for demo purposes-->
+    <!-- <div class="form">
+      <mat-form-field color="accent">
+        <textarea matInput #input class="form-control" placeholder="Name" [(ngModel)]="data.name" name="name" required ></textarea>
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+      </mat-form-field>
+    </div> -->
+
+    <b>Name*:&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text"   [(ngModel)]="data.name" name="name" ></b>
+
+    <!--Contains mat-hint for characters count and has maxLengt set-->
+    <!-- <div class="form">
+      <mat-form-field color="accent">
+        <input matInput #inputstate class="form-control" placeholder="Age" [(ngModel)]="data.age" name="age" maxlength="10" required >
+        <mat-error *ngIf="formControl.invalid">{{getErrorMessage()}}</mat-error>
+        <mat-hint align="end">{{inputstate.value?.length || 0}}/10</mat-hint>
+      </mat-form-field>
+    </div> -->
+
+    <b>Age*:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.age"  ></mat-slider></b><!--<input   name="id"  >  -->
+
+    <!-- <div class="form">
+        <mat-form-field color="accent">
+          <input matInput placeholder="Url" [(ngModel)]="data.url" name="url">
+        </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Created at" [(ngModel)]="data.created_at" name="created_at">
+      </mat-form-field>
+    </div>
+
+    <div class="form">
+      <mat-form-field color="accent">
+        <input matInput placeholder="Updated at" [(ngModel)]="data.updated_at" name="updated_at">
+      </mat-form-field>
+    </div> -->
+
+    <div mat-dialog-actions>
+      <button mat-button [type]="submit"  [mat-dialog-close]="1" (click)="stopEdit()">Save</button>  <!--[disabled]="!formControl.valid"-->
+      <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+    </div>
+  <!-- </form> -->
+</div>

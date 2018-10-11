@@ -1,0 +1,17 @@
+
+<br><br>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patients List</span>
+    </mat-toolbar-row>
+</mat-toolbar> <br> 
+<!-- <mat-form-field>
+    <input matInput [matDatepicker]="dp" placeholder="Choose date" [formControl]="date">
+    <mat-datepicker-toggle matSuffix [for]="dp"></mat-datepicker-toggle>
+    <mat-datepicker #dp></mat-datepicker>
+  </mat-form-field> -->
+<!-- <mat-paginator [length]="50"
+              [pageSize]="10"
+              [pageSizeOptions]="[5, 10, 25]">
+</mat-paginator> -->
+<ng2-smart-table [settings]="settings" [source]="data"></ng2-smart-table>

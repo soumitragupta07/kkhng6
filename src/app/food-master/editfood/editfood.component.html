@@ -1,0 +1,25 @@
+<div class="container">
+    
+  <h1 mat-dialog-title>Add New Record</h1>
+
+  <div mat-dialog-content>
+  <b>FoodName*:&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text"   [(ngModel)]="data.foodname" name="foodname"  style="width: 156px;" ></b><br>
+  <br>
+  <b>Calories*:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.cal"  ></mat-slider></b><input  [(ngModel)]="data.cal"  style="width: 30px;">
+  <br>
+  <b>Fat*     :   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.fat"  ></mat-slider></b><input  [(ngModel)]="data.fat"  style="width: 30px;">
+  <br>
+  <b>Carbs* :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.carbs"  ></mat-slider></b><input  [(ngModel)]="data.carbs"  style="width: 30px;">
+  <br>
+  <b>Fiber*:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.fiber"  ></mat-slider></b><input  [(ngModel)]="data.fiber"  style="width: 30px;">
+  <br>
+  <b>Protein*:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.protein"  ></mat-slider></b><input  [(ngModel)]="data.protein"  style="width: 30px;">
+  </div>
+
+
+  <div mat-dialog-actions>
+    <button mat-button [type]="submit"  [mat-dialog-close]="1" (click)="stopEdit()">Save</button>  <!--[disabled]="!formControl.valid"-->
+    <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+  </div>
+<!-- </form> -->
+</div>

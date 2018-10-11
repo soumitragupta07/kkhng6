@@ -1,0 +1,94 @@
+<app-header></app-header>
+<br><br><br>
+<div class="container">
+  <mat-toolbar><h2>FoodValue Master List</h2></mat-toolbar>
+  <!-- Trigger the modal with a button -->
+  <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Add</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">FoodValue Master -ADD/EDIT: </h4>
+        </div>
+        <div class="modal-body">
+          <p>Beans:</p><br/>
+		  <p>Egg:</p><br/>
+		  <p>Blueberry:</p><br/>
+		  <p>Cabbage:</p><br/>
+		  <p>Yok:</p><br/>
+		  <p>wheat:</p><br/>
+		  <p>Beans:</p><br/>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+  
+</div>
+<div class="container">
+  <h2></h2>
+  <p></p>            
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th >Items</th>
+        <th>Value</th>
+		
+        <!-- <th>Email</th> -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Beans</td>
+        <td>1 </td>
+        <td><button type="button"  class="btn btn-success custom-width">Edit</button></td>
+		<td><button type="button" ng-click="deleteEmployee(employee.hiddenid)" class="btn btn-danger custom-width">Delete</button></td>
+        <!-- <td>john@example.com</td> -->
+		<td><p data-placement="top" data-toggle="tooltip" title="Edit"><button class="btn btn-primary btn-xs" data-title="Edit" data-toggle="modal" data-target="#edit" ><span class="glyphicon glyphicon-pencil"></span></button></p></td>
+    <td><p data-placement="top" data-toggle="tooltip" title="Delete"><button class="btn btn-danger btn-xs" data-title="Delete" data-toggle="modal" data-target="#delete" ><span class="glyphicon glyphicon-trash"></span></button></p></td>
+      </tr>
+      <tr>
+        <td>Egg</td>
+        <td>6</td>
+        <!-- <td>mary@example.com</td> -->
+      </tr>
+      <tr>
+        <td>Blueberry</td>
+        <td>3</td>
+        <!-- <td>july@example.com</td> -->
+      </tr>
+	  <tr>
+        <td>Cabbage</td>
+        <td>3</td>
+        <!-- <td>july@example.com</td> -->
+      </tr>
+	  <tr>
+        <td>Cake</td>
+        <td>3</td>
+        <!-- <td>july@example.com</td> -->
+      </tr>
+	  <tr>
+        <td>Yok</td>
+        <td>3</td>
+        <!-- <td>july@example.com</td> -->
+      </tr>
+	  <tr>
+        <td>Blueberry</td>
+        <td>3</td>
+        <!-- <td>july@example.com</td> -->
+      </tr>
+	  
+    </tbody>
+  </table>
+</div>
+
+
+<app-footer></app-footer>

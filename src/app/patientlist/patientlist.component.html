@@ -1,0 +1,116 @@
+<app-header></app-header>
+<br><br>
+<mat-toolbar color="primary">
+  <span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Patient List</span>
+  <span class="spacer"></span>
+  Refresh
+  <button mat-icon-button (click)="refresh()">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<!-- <div class="col-md-6 "> -->
+<div class="container mat-elevation-z8">
+
+  <div class="form ">
+    <mat-form-field floatPlaceholder="never" color="accent">
+      <input matInput #filter placeholder="Filter ">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Patient Name</mat-header-cell>
+      <mat-cell *matCellDef="let row" >{{row.name}}</mat-cell>
+    </ng-container>
+    <br><br>
+    <ng-container matColumnDef="id">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Patient Number</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.id}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="phone">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Phone</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.phone}}</mat-cell>
+    </ng-container>
+    <br><br>
+    <ng-container matColumnDef="status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Status</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.status}}</mat-cell>
+    </ng-container>
+
+    <!-- <ng-container matColumnDef="fiber">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Fiber</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fiber}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="protein">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Protein</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.protein}}</mat-cell>
+    </ng-container> -->
+
+    <ng-container matColumnDef="actions">
+        <mat-header-cell *matHeaderCellDef mat-sort-header>N.Intakes</mat-header-cell>
+  
+      
+      
+  
+        <mat-cell *matCellDef="let row; let i=index;">
+          <!-- <button mat-icon-button color="accent" (click)="startEdit(i, row.id, row.name, row.age)">
+            <mat-icon aria-label="Edit">edit</mat-icon>
+          </button>-->
+
+
+          <a mat-icon-button color="warn" routerLink=".">
+              <mat-icon aria-label="Example icon-button with a heart icon">link</mat-icon>
+          </a>
+
+        </mat-cell>
+      </ng-container>
+         
+
+    <!-- <ng-container matColumnDef="created_at">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Created at</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.created_at}}</mat-cell>
+    </ng-container>-->
+
+    <!--<ng-container matColumnDef="updated_at">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Updated at</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.updated_at}}</mat-cell>
+    </ng-container> --> -->
+
+    <!-- actions -->
+    
+
+      
+        <!-- <button mat-icon-button color="accent" >--><!--(click)="deleteItem(i, row.name, row.id, row.phone,row.status)" -->
+<!--<mat-icon aria-label="Delete"></mat-icon>
+        </button> -->
+      
+    
+
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+  <div class="no-results" [style.display]="dataSource.renderedData.length == 0 ? '' : 'none'">
+    No results
+  </div>
+
+  <mat-paginator #paginator
+                 [length]="dataSource.filteredData.length"
+                 [pageIndex]="0"
+                 [pageSize]="100"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>
+<!-- </div> -->
+<app-footer></app-footer>
+

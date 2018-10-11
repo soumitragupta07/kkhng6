@@ -1,0 +1,72 @@
+
+
+
+.dropdown1
+ { 
+  width: 100px; 
+  /* padding: 1px 2px;
+  margin: 2px 0;
+  box-sizing: border-box; */
+  background-color: lightgreen;
+  border: 5 px;
+ }
+.dropdown2 
+{
+   width: 100px;
+   background-color:orange;
+}
+/* .dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+} */
+
+/* .dropdown-content a:hover {background-color: #f1f1f1} */
+
+
+.error { background-color: #700; color: lightcyan; }
+
+.currency { width: 10em; }
+
+
+.mat-slider {
+    width: 90px;
+  }
+
+  /*tabs*/
+
+  
+  
+  /* Style tab links */
+  .demo-tab-group {
+    
+     background-color: white;
+    
+   
+    
+    
+  }
+  .mat-tab-label{
+    background-color:yellow;
+    
+  }
+  
+  .demo-tab-content {
+    padding: 2px;
+    
+  }
+  
+  
+  /* .mat-tab-body-wrapper {
+    color: white;
+    background-color: white;
+  } */
+  .mat-tab-label.mat-tab-label-active {
+    background-color:pink;
+  }
+
+  .warning
+  {
+   background-color: rgb(86, 12, 223);
+  }

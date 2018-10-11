@@ -1,0 +1,39 @@
+<div class="container">
+    
+    <h1 mat-dialog-title>Add New Record</h1>
+ 
+    <div mat-dialog-content>
+    
+    <b>FoodName<font color=red>*</font>:&nbsp;&nbsp;&nbsp;&nbsp;  <input type="text"   [(ngModel)]="data.foodname" name="foodname"  style="width: 156px;" ></b><br>
+    <br>
+    <b>Calories<font color=red>*</font>:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.cal"  ></mat-slider></b><input  [(ngModel)]="data.cal"  style="width: 30px;">
+    <br>
+    <b>Fat<font color=red>*</font>     :   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.fat"  ></mat-slider></b><input  [(ngModel)]="data.fat"  style="width: 30px;">
+    <br>
+    <b>Carbs<font color=red>*</font> :  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.carbs"  ></mat-slider></b><input  [(ngModel)]="data.carbs"  style="width: 30px;">
+    <br>
+    <b>Fiber<font color=red>*</font>:    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.fiber"  ></mat-slider></b><input  [(ngModel)]="data.fiber"  style="width: 30px;">
+    <br>
+    <b>Protein<font color=red>*</font>:     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<mat-slider [thumb-label]="thumbLabel"  [(ngModel)]="data.protein"  ></mat-slider></b><input  [(ngModel)]="data.protein"  style="width: 30px;">
+   
+     </div>
+  
+
+
+
+
+
+
+
+
+
+
+    <div mat-dialog-actions>
+        
+       <button mat-button (click)="onNoClick()" tabindex="-1">Cancel</button>
+       <button mat-button [type]="submit"  [mat-dialog-close]="1" (click)="confirmAdd() || refresh()" cdkFocusInitial>Save</button><!--[disabled]="!formControl.valid" -->
+       <!-- <mat-progress-bar mode="indeterminate"></mat-progress-bar> -->
+     </div>
+
+
+</div>  

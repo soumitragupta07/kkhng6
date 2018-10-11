@@ -1,0 +1,99 @@
+<app-header></app-header>
+<br><br>
+<mat-toolbar color="primary">
+  <span>FoodValue MasterList</span>
+  <span class="spacer"></span>
+  Refresh
+  <button mat-icon-button (click)="refresh()">
+    <mat-icon>refresh</mat-icon>
+  </button>
+</mat-toolbar>
+
+
+<!-- <div class="col-md-6 "> -->
+<div class="container mat-elevation-z8">
+
+  <div class="form ">
+    <mat-form-field floatPlaceholder="never" color="accent">
+      <input matInput #filter placeholder="Filter ">
+    </mat-form-field>
+  </div>
+
+  <mat-table #table [dataSource]="dataSource" matSort class="mat-cell">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+
+    <!-- ID Column -->
+    <ng-container matColumnDef="foodname">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Food</mat-header-cell>
+      <mat-cell *matCellDef="let row" >{{row.foodname}}</mat-cell>
+    </ng-container>
+    <br><br>
+    <ng-container matColumnDef="cal">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Calories</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.cal}}</mat-cell>
+    </ng-container>
+    
+
+    <ng-container matColumnDef="fat">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Fat</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fat}}</mat-cell>
+    </ng-container>
+    <br><br>
+    <ng-container matColumnDef="carbs">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Carbs</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.carbs}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="fiber">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Fiber</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.fiber}}</mat-cell>
+    </ng-container>
+    <ng-container matColumnDef="protein">
+      <mat-header-cell *matHeaderCellDef mat-sort-header>Protein</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.protein}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="actions">
+      <mat-header-cell *matHeaderCellDef>
+        <button mat-icon-button color="primary" (click)="addNew()">
+          <mat-icon aria-label="Example icon-button with a heart icon">add</mat-icon>
+        </button>
+      </mat-header-cell>
+
+    
+    
+
+      <mat-cell *matCellDef="let row; let i=index;">
+        <button mat-icon-button color="accent" (click)="startEdit(i, row.foodname, row.cal, row.fat,row.carbs,row.fiber,row.protein)">
+          <mat-icon aria-label="Edit">edit</mat-icon>
+        </button>
+
+        <button mat-icon-button color="accent" (click)="deleteItem(i, row.foodname)">
+          <mat-icon aria-label="Delete">delete</mat-icon>
+        </button>
+      </mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
+
+
+  <div class="no-results" [style.display]="dataSource.renderedData.length == 0 ? '' : 'none'">
+    <mat-spinner color="accent" mode="determinate"></mat-spinner>
+  </div>
+
+  <div class="my-container">
+      <ngx-loading [show]="loading" [config]="{ backdropBorderRadius: '14px' }"></ngx-loading>
+      //...
+  </div> 
+  <mat-paginator #paginator
+                 [length]="dataSource.filteredData.length"
+                 [pageIndex]="0"
+                 [pageSize]="100"
+                 [pageSizeOptions]="[5, 10, 25, 100]">
+  </mat-paginator>
+</div>
+<!-- </div> -->
+<app-footer></app-footer>

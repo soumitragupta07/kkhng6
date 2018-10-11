@@ -1,0 +1,67 @@
+[{
+   "food": "Carrots",
+   "calories": "149",
+   "fat": "23",
+   "carbs": "44",
+   "fiber": "55",
+   "protein": "66"
+},
+
+{
+   "food": "Brussel",
+   "calories": "234",
+   "fat": "232",
+   "carbs": "454",
+   "fiber": "515",
+   "protein": "69"
+},
+
+{
+   "food": "Lemon Juice",
+   "calories": "149",
+   "fat": "23",
+   "carbs": "44",
+   "fiber": "55",
+   "protein": "66"
+},
+{
+   "food": "Mushrooms",
+   "calories": "149",
+   "fat": "243",
+   "carbs": "44",
+   "fiber": "535",
+   "protein": "66"
+},
+{
+   "food": "Mushrooms",
+   "calories": "149",
+   "fat": "243",
+   "carbs": "44",
+   "fiber": "535",
+   "protein": "66"
+},
+{
+   "food": "Mushrooms",
+   "calories": "149",
+   "fat": "243",
+   "carbs": "44",
+   "fiber": "535",
+   "protein": "66"
+},
+{
+   "food": "Mushrooms",
+   "calories": "149",
+   "fat": "243",
+   "carbs": "44",
+   "fiber": "535",
+   "protein": "66"
+},
+
+{
+    "food": "Eggplant",
+    "calories": "333",
+    "fat": "23",
+    "carbs": "44",
+    "fiber": "55",
+    "protein": "66"
+}]
